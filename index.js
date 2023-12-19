@@ -1,39 +1,23 @@
-console.log("Welcome Node JS.");
-console.log("1");
-console.log("2");
-console.log("3");
-//REGULAR OL FUNCTION
-function zbir(a, b) {
-  return a + b;
-}
-zbir();
-console.log(zbir(5, 5));
-// METODI
-const ucenik = {
-  ime: "Xhoni",
-  prezime: "Milioni",
-  pozdrav: function () {
-    console.log(`Zdravo, ${this.ime}`);
-  },
-};
-ucenik.pozdrav();
-
-// IIFE
-(function () {
-  console.log("Taen Kod");
-})();
-
-//ZADACHA BROJ EDEN.
-// DA SE KREIRA FUNKCIJALNA  EKSPRESIJA SO IME c2f KOJA KJE KONVERTIRA CELZIUS U FERENHAJT
-
-const c2f2 = (c) => {
-  const fahr = (c * 9) / 5 + 32;
+const f2c = (f, c) => {
+  f;
+  c = (f - 32) * (5 / 9);
+  console.log(`Fahrenheit temperature is` + " " + f);
+  console.log(`In celsius that's` + " " + c.toFixed(2));
   if (c < 0) {
-    console.log("Kochan");
-  } else if (c > 0 && c < 22) {
-    console.log("Not so kochan");
-  } else if (c > 22) {
-    console.log("Vrucho");
+    console.log("Ladno");
+  } else if (c > 21 && c < 40) {
+    console.log("Sredno Mlako");
+  } else if (c > 40) {
+    console.log("Vrukjo :D");
   }
 };
-c2f2(5);
+f2c(150);
+let numbers = {
+  num1: 42,
+  num2: 24,
+
+  sum: function () {
+    return this.num1 + this.num2;
+  },
+};
+console.log(numbers["sum"]());
